@@ -8,193 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #6366f1;
-            --secondary: #a855f7;
-            --bg: #0f172a;
-            --text: #f8fafc;
-            --glass: rgba(255, 255, 255, 0.05);
-            --border: rgba(255, 255, 255, 0.1);
-            --facebook: #1877F2;
-            --instagram: #E4405F;
-            --tiktok: #000000;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-x: hidden;
-            overflow-y: auto;
-            padding: 2rem 0;
-            background-image: 
-                radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 40%);
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 3rem;
-            background: var(--glass);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 2rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            max-width: 600px;
-            width: 90%;
-            animation: fadeIn 1s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.05em;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            color: var(--primary);
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .logo {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 1.5rem;
-            border: 4px solid var(--border);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-            animation: pulse 4s infinite ease-in-out;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-        }
-
-        .social-grid {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .social-btn {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 12px;
-            background: var(--glass);
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-            color: var(--text);
-        }
-
-        .social-btn:hover {
-            transform: translateY(-5px);
-            background: var(--border);
-        }
-
-        .social-btn svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        .fb:hover { color: var(--facebook); border-color: var(--facebook); }
-        .ig:hover { color: var(--instagram); border-color: var(--instagram); }
-        .tk:hover { color: var(--text); border-color: #fff; background: #000; }
-
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: #25D366;
-            color: white;
-            text-decoration: none;
-            border-radius: 1rem;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3);
-        }
-
-        .whatsapp-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 25px -5px rgba(37, 211, 102, 0.4);
-            filter: brightness(1.1);
-        }
-
-        /* Decorative blobs */
-        .blobs-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .blob {
-            position: absolute;
-            width: 40vw;
-            height: 40vw;
-            max-width: 400px;
-            max-height: 400px;
-            background: var(--primary);
-            filter: blur(80px);
-            border-radius: 50%;
-            opacity: 0.2;
-            animation: move 20s infinite alternate ease-in-out;
-        }
-
-        @keyframes move {
-            0% { transform: translate(-10%, -10%); }
-            100% { transform: translate(10%, 10%); }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="blobs-container">
@@ -203,34 +17,188 @@
     </div>
 
     <div class="container">
-        <img src="logo.jpg" alt="FrioMax Logo" class="logo">
-        <div class="badge">Alta Calidad • Máximo Rendimiento • Garantía</div>
-        <h1>FrioMax Autopartes</h1>
-        <p>Especialistas en autopartes de aire acondicionado automotriz. Envíos rápidos a nivel nacional desde Bucaramanga, Colombia.</p>
+        <header class="header-flex">
+            <img src="logo.jpg" alt="FrioMax Logo" class="logo">
+            <div class="header-content">
+                <div class="badge">Alta Calidad • Máximo Rendimiento • Garantía</div>
+                <h1>FrioMax Autopartes</h1>
+                <p>Especialistas en autopartes de aire acondicionado automotriz. Envíos rápidos a nivel nacional desde Bucaramanga, Colombia.</p>
+                
+                <div class="actions-row">
+                    <a href="https://wa.me/573180443178" class="whatsapp-btn compact" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor; margin-right: 6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp
+                    </a>
+                    <div class="social-grid">
+                        <a href="https://www.facebook.com/Jhon.Carlos.Roa.M/" class="social-btn fb" title="Facebook" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.791-4.667 4.53-4.667 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/friomaxautopartes" class="social-btn ig" title="Instagram" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@friomax.autopartes" class="social-btn tk" title="TikTok" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.58-1.01V14.5c0 1.83-.52 3.63-1.47 5.16-1.45 2.31-3.9 3.86-6.62 4.22-4.08.55-8.24-1.6-9.87-5.41C-2.8 14.53-.4 9.17 4.41 7.27c1.3-.51 2.71-.71 4.1-.59v4.16c-.92-.12-1.87-.04-2.75.29-1.84.69-3.08 2.53-2.9 4.5.15 1.62 1.3 3.12 2.87 3.59 1.49.44 3.19.06 4.31-.97.77-.7 1.18-1.7 1.22-2.74l.03-15.49z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         
-        <div style="margin-bottom: 2rem;">
-            <a href="https://wa.me/573180443178" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: currentColor; margin-right: 8px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Cotizar por WhatsApp
-            </a>
+        <div style="margin-top: 4rem;">
+            <h2 style="margin-bottom: 1.5rem; color: var(--text);">Catálogo de Repuestos Auténticos</h2>
+            
+            <!-- Tabs Component -->
+            <div class="tabs-container">
+                <nav class="tabs-nav">
+                    <button class="tab-btn active" data-tab="todos">Todos</button>
+                    <button class="tab-btn" data-tab="compresores">Compresores</button>
+                    <button class="tab-btn" data-tab="condensadores">Condensadores</button>
+                    <button class="tab-btn" data-tab="filtros">Filtros</button>
+                    <button class="tab-btn" data-tab="valvulas">Válvulas</button>
+                    <button class="tab-btn" data-tab="evaporadores">Evaporadores</button>
+                    <button class="tab-btn" data-tab="blowers">Blowers</button>
+                </nav>
+
+                <div class="tabs-content">
+                    <!-- Tab: Todos -->
+                    <div id="todos" class="tab-pane active">
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="FrioMax/COMPRESORES/compresor_amarok_7seu17c.jpg" alt="Compresor Amarok 7SEU17C" class="product-img">
+                                <div class="product-info">
+                                    <h3>Compresor Amarok 7SEU17C</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Calidad original para alto rendimiento.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20el%20Compresor%20Amarok%207SEU17C" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="FrioMax/CONDESADORES/condesadore_item_1.jpg" alt="Condensador Universal" class="product-img">
+                                <div class="product-info">
+                                    <h3>Condensador Superior</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Máxima disipación de calor.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20el%20Condensador%20Superior" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="FrioMax/VALVULAS/valvula_kenworth.jpg" alt="Válvula Kenworth" class="product-img">
+                                <div class="product-info">
+                                    <h3>Válvula Expansión Kenworth</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Componente de precisión industrial.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20la%20Válvula%20de%20Expansión%20Kenworth" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="FrioMax/BLOWERS/blower_item_1.jpg" alt="Blower Alto Flujo" class="product-img">
+                                <div class="product-info">
+                                    <h3>Blower de Ventilación</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Potencia y durabilidad garantizada.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20el%20Blower%20de%20Ventilación" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Compresores -->
+                    <div id="compresores" class="tab-pane">
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="FrioMax/COMPRESORES/compresor_508_24v.jpg" alt="Compresor 508 24V" class="product-img">
+                                <div class="product-info">
+                                    <h3>Compresor 508 24V</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Ideal para sistemas pesados.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20el%20Compresor%20508%2024V" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="FrioMax/COMPRESORES/compresor_spark_gt.jpg" alt="Compresor Spark GT" class="product-img">
+                                <div class="product-info">
+                                    <h3>Compresor Spark GT</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Repuesto original certificado.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20el%20Compresor%20Spark%20GT" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Condensadores -->
+                    <div id="condensadores" class="tab-pane">
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="FrioMax/CONDESADORES/condesadore_item_5.jpg" alt="Condensador Tipo 5" class="product-img">
+                                <div class="product-info">
+                                    <h3>Condensador de Flujo Paralelo</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Eficiencia térmica superior.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20el%20Condensador%20de%20Flujo%20Paralelo" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Filtros -->
+                    <div id="filtros" class="tab-pane">
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="FrioMax/FILTROS/filtro_item_1.jpg" alt="Filtro Aire" class="product-img">
+                                <div class="product-info">
+                                    <h3>Filtro de Aire Premium</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Máxima filtración de partículas.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20el%20Filtro%20de%20Aire%20Premium" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Válvulas -->
+                    <div id="valvulas" class="tab-pane">
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="FrioMax/VALVULAS/valvula_master_trafic.jpg" alt="Válvula Master Trafic" class="product-img">
+                                <div class="product-info">
+                                    <h3>Válvula Renault Master / Trafic</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Compatibilidad perfecta OEM.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20la%20Válvula%20Renault%20Master" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Evaporadores -->
+                    <div id="evaporadores" class="tab-pane">
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="FrioMax/EVAPORADORES/evaporadore_item_1.jpg" alt="Evaporador Item 1" class="product-img">
+                                <div class="product-info">
+                                    <h3>Evaporador Multipass</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Enfriamiento rápido y constante.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20el%20Evaporador%20Multipass" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Blowers -->
+                    <div id="blowers" class="tab-pane">
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="FrioMax/BLOWERS/blower_item_12.jpg" alt="Blower Item 12" class="product-img">
+                                <div class="product-info">
+                                    <h3>Blower Eléctrico 12V</h3>
+                                    <p style="font-size: 0.85rem; margin-bottom: 1rem;">Silencioso y de alta potencia.</p>
+                                    <a href="https://wa.me/573180443178?text=Hola%20FrioMax,%20me%20interesa%20el%20Blower%20Eléctrico%2012V" target="_blank" rel="noopener noreferrer" class="quote-btn">Cotizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="social-grid">
-            <a href="https://www.facebook.com/Jhon.Carlos.Roa.M/" class="social-btn fb" title="Facebook" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.791-4.667 4.53-4.667 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/friomaxautopartes" class="social-btn ig" title="Instagram" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="https://www.tiktok.com/@friomax.autopartes" class="social-btn tk" title="TikTok" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.58-1.01V14.5c0 1.83-.52 3.63-1.47 5.16-1.45 2.31-3.9 3.86-6.62 4.22-4.08.55-8.24-1.6-9.87-5.41C-2.8 14.53-.4 9.17 4.41 7.27c1.3-.51 2.71-.71 4.1-.59v4.16c-.92-.12-1.87-.04-2.75.29-1.84.69-3.08 2.53-2.9 4.5.15 1.62 1.3 3.12 2.87 3.59 1.49.44 3.19.06 4.31-.97.77-.7 1.18-1.7 1.22-2.74l.03-15.49z"/></svg>
-            </a>
-        </div>
-        
-        <div style="margin-top: 2rem; font-size: 0.8rem; color: #64748b;">
+        <div style="margin-top: 3rem; font-size: 0.8rem; color: #64748b;">
             <p style="margin-bottom: 0.5rem;">📍 Hangar 4 - Terminal de transporte de Bucaramanga, Colombia</p>
             <p>📧 friomaxautomotriz@gmail.com | 📞 305 3269418</p>
         </div>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
